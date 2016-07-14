@@ -22,7 +22,7 @@ public class Register extends Activity {
 
     EditText name, password, email;
     String Name, Password, Email;
-    Context ctx=this;
+    Context ctx = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,11 +48,11 @@ public class Register extends Activity {
             String name = params[0];
             String password = params[1];
             String email = params[2];
-            String data="";
+            String data = "";
             int tmp;
 
             try {
-                URL url = new URL("http://5-dot-meetup362.appspot.com/register.php");
+                URL url = new URL("http://6-dot-meetup362.appspot.com/register.php");
                 String urlParams = "name="+name+"&password="+password+"&email="+email;
 
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
