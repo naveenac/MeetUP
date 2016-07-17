@@ -18,6 +18,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.GoogleApiClient;
+
+import org.w3c.dom.Text;
+
 import goldteam.meetup.ServerResponse;
 import goldteam.meetup.ServerRequest;
 import goldteam.meetup.User;
@@ -38,6 +43,7 @@ public class LoginFragment extends android.app.Fragment implements View.OnClickL
     private AppCompatButton btn_login;
     private EditText et_email,et_password;
     private TextView tv_register;
+    private TextView tv_forgot;
     private ProgressBar progress;
     private SharedPreferences pref;
 
@@ -55,6 +61,7 @@ public class LoginFragment extends android.app.Fragment implements View.OnClickL
 
         btn_login = (AppCompatButton)view.findViewById(R.id.btn_login);
         tv_register = (TextView)view.findViewById(R.id.tv_register);
+        tv_forgot = (TextView)view.findViewById(R.id.tv_forgot);
         et_email = (EditText)view.findViewById(R.id.et_email);
         et_password = (EditText)view.findViewById(R.id.et_password);
 
@@ -62,6 +69,7 @@ public class LoginFragment extends android.app.Fragment implements View.OnClickL
 
         btn_login.setOnClickListener(this);
         tv_register.setOnClickListener(this);
+        tv_forgot.setOnClickListener(this);
     }
 
     @Override
@@ -71,6 +79,11 @@ public class LoginFragment extends android.app.Fragment implements View.OnClickL
 
             case R.id.tv_register:
                 goToRegister();
+                break;
+
+            case R.id.tv_forgot:
+                Log.i("Button","button pressed");
+                goToForgot();
                 break;
 
             case R.id.btn_login:
@@ -143,6 +156,15 @@ public class LoginFragment extends android.app.Fragment implements View.OnClickL
         Fragment register = new RegisterFragment();
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.replace(R.id.fragment_frame,register);
+        Log.i("Register","reg");
+        ft.commit();
+    }
+    private void goToForgot(){
+
+        Log.i("ResetPasswordFragment","forgot");
+        Fragment reset = new ResetPasswordFragment();
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.fragment_frame,reset);
         ft.commit();
     }
 

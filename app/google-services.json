@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "403590641132",
+    "project_id": "firebase-meetup"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403590641132:android:3e2dc71325941e4b",
+        "android_client_info": {
+          "package_name": "goldteam.meetup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403590641132-ticn4deruqdckvvqb3b3vc7ppj5q28ug.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "goldteam.meetup",
+            "certificate_hash": "1BB6871E75D967DEFE3B2CDAB1102444D3FBB1E9"
+          }
+        },
+        {
+          "client_id": "403590641132-7ka77sq8b940dbf172e0shpltlrrrldc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuoL7XCaXz0CjP-9OZUW64J7aga47mX_k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
