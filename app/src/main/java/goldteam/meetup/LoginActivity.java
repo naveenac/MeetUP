@@ -7,14 +7,10 @@ package goldteam.meetup;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.api.GoogleApiClient;
-
-public class MainActivity extends AppCompatActivity{
+public class LoginActivity extends AppCompatActivity{
 
     private SharedPreferences pref;
 

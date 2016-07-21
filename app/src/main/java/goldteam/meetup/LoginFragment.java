@@ -1,10 +1,9 @@
 package goldteam.meetup;
 
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.support.v7.widget.AppCompatButton;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -13,19 +12,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
-
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.api.GoogleApiClient;
-
-import org.w3c.dom.Text;
-
-import goldteam.meetup.ServerResponse;
-import goldteam.meetup.ServerRequest;
-import goldteam.meetup.User;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -40,7 +30,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LoginFragment extends android.app.Fragment implements View.OnClickListener{
 
-    private AppCompatButton btn_login;
+    private AppCompatButton btn_login, btn_test;
     private EditText et_email,et_password;
     private TextView tv_register;
     private TextView tv_forgot;
@@ -64,12 +54,14 @@ public class LoginFragment extends android.app.Fragment implements View.OnClickL
         tv_forgot = (TextView)view.findViewById(R.id.tv_forgot);
         et_email = (EditText)view.findViewById(R.id.et_email);
         et_password = (EditText)view.findViewById(R.id.et_password);
+        btn_test = (AppCompatButton) view.findViewById(R.id.btn_test);
 
         progress = (ProgressBar)view.findViewById(R.id.progress);
 
         btn_login.setOnClickListener(this);
         tv_register.setOnClickListener(this);
         tv_forgot.setOnClickListener(this);
+        btn_test.setOnClickListener(this);
     }
 
     @Override
@@ -80,15 +72,25 @@ public class LoginFragment extends android.app.Fragment implements View.OnClickL
             case R.id.tv_register:
                 goToRegister();
                 break;
+            case R.id.btn_test:
+                Log.i("Button","button pressed");
+                goToTest();
+                break;
 
             case R.id.tv_forgot:
-                Log.i("Button","button pressed");
+                Log.i("Button","reset button pressed");
                 goToForgot();
                 break;
 
             case R.id.btn_login:
                 String email = et_email.getText().toString();
                 String password = et_password.getText().toString();
+
+                // upon 'login button' press, close keyboard
+                InputMethodManager imm = (InputMethodManager) getActivity()
+                        .getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
+
 
                 if(!email.isEmpty() && !password.isEmpty()) {
 
@@ -167,7 +169,11 @@ public class LoginFragment extends android.app.Fragment implements View.OnClickL
         ft.replace(R.id.fragment_frame,reset);
         ft.commit();
     }
-
+    private void goToTest(){
+        Log.i("goToTest", "test");
+        Intent i = new Intent(getActivity(), CalendarActivity.class);
+        startActivity(i);
+    }
     private void goToProfile(){
 
         Fragment profile = new ProfileFragment();
