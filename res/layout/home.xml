@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ombredit"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Error Message"
+        android:id="@+id/err"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:text="Find"
+        android:id="@+id/button2"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="87dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="#7931d7b0"
+        android:textColor="#ffffff"
+        android:textSize="30dp" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:text="Create"
+        android:id="@+id/button3"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="#798f6deb"
+        android:textColor="#ffffff"
+        android:textSize="30dp" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:text="Invitations"
+        android:id="@+id/button4"
+        android:layout_below="@+id/button3"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:background="#8be21a9c"
+        android:textColor="#ffffff"
+        android:textSize="30dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button5"
+        android:layout_above="@+id/button4"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="386dp" />
+
+</RelativeLayout>
