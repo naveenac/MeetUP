@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ombredit"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true" >
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="425dp"
+            android:background="#9f0e0000"
+        android:id="@+id/relativeLayout2"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+            <TextView
+                android:id="@+id/member_login_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Event"
+                android:textColor="#fafafa"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:typeface="normal"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:id="@+id/username_edtext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/register_uname"
+                android:gravity="center"
+                android:hint="Location"
+                android:inputType="text"
+                android:textColor="#fafafa"
+                android:textStyle="bold"
+                android:layout_below="@+id/editText"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="39dp" />
+
+            <EditText
+                android:id="@+id/passwd_edtext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/register_uname"
+                android:gravity="center"
+                android:hint="Friends"
+                android:inputType="textPassword"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_below="@+id/username_edtext"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="44dp" />
+
+            Button
+                android:id="@+id/login_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#7b1e9f92"
+                android:text="Send"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="69dp" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/register_uname"
+            android:gravity="center"
+            android:hint="Event"
+            android:inputType="text"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_below="@+id/member_login_tv"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="32dp" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/register_uname"
+            android:gravity="center"
+            android:hint="Date: ex: 7/26/16"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/passwd_edtext" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/register_uname"
+            android:gravity="center"
+            android:hint="Time: ex: 2:30pm-11:00pm"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:background="#631730eb"
+        android:text="SEND"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" /><![CDATA[
+
+    EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/editText4"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="96dp" />
+
+]]>
+</RelativeLayout>
